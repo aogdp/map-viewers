@@ -1,0 +1,16 @@
+# Site wide configuration
+
+title: AOGDP Map Viewers
+locale: en_US
+#description: Describe your website here.
+#logo: site-logo.png
+url: maps.aogdp.org or viewers.aogdp.org
+
+# Jekyll configuration
+
+permalink:   /:title/
+markdown:    kramdown
+highlighter: rouge
+#sass:
+#  sass_dir: _sass
+#  style: compressed
