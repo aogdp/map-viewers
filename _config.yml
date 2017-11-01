@@ -1,14 +1,14 @@
 # Jekyll Config
 
-#title: AOGDP Map Viewers
-#locale: en_US
+title: AOGDP Map Viewers
+locale: en_US
 #description: Describe your website here.
 #logo: site-logo.png
-#url: maps.aogdp.org or viewers.aogdp.org
+url: viewers.aogdp.org
 
 # Jekyll configuration
 
-#permalink:   /:title/
+permalink:   /:title/
 #markdown:    kramdown
 #highlighter: rouge
 #sass:
@@ -22,7 +22,7 @@
 ## Source: https://github.com/tommy351/hexo/
 
 # Site
-title: AOGDP Map Viewers
+#title: AOGDP Map Viewers
 #subtitle:
 #description:
 #author: John Doe
@@ -31,9 +31,9 @@ title: AOGDP Map Viewers
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://viewers.aogdp.org
-root: /
-permalink: :title/
+#url: https://viewers.aogdp.org
+#root: /
+#permalink: :title/
 #tag_dir: tags
 #archive_dir: archives
 #category_dir: categories

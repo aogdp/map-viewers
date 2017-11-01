@@ -1,0 +1,42 @@
+---
+layout: default
+title: Noble County Parcel Viewer
+api: leaflet
+basemap: light
+zoom: 12
+layers:
+  - name: Parcels
+    url: http://bhgis.org/arcgis/rest/services/aogdp/NobleParcels/MapServer
+    type: esrimapservice
+    infowindow: >-
+      '<h3>Parcel Info</h3>' + (properties ?
+      '<strong>'+ properties['OWNER'] +
+      '<br />' + properties['LOCADDR'] +
+      '</strong><br />' + properties['PIN']  +
+      '<br />' + properties['LEGDESC'] +
+      '<br />' + properties['MAILADDR'] +
+      '<br />' + properties['AAREAACR'] + 'ac': "");
+    search:
+      type: mapServiceProvider
+      fields: >-
+        "OWNER", "PIN", "LOCADDR"
+      results: ["OWNER", "PIN"]
+      layerid: 4
+    show: true
+  - name: Shale
+    url: http://bhgis.org/arcgis/rest/services/oil/ShaleWells/MapServer
+    type: esrimapservice
+    geometry: point
+  - name: Flood Map
+    type: esrimapservice
+    url: http://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer
+    minZoom: 12
+  - name: GeoJSON
+    type: file
+    format: geojson
+    url: "/geojson/ovrdc_rtpo_boundary.geojson"
+    show: true
+#use double quotes here
+legend: >-
+  <h3>Public Use Codes</h3><i style="background:purple;"></i>&nbspFederal&nbsp;<i style="background:green;"></i>&nbsp;State
+---
